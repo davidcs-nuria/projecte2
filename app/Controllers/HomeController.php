@@ -2,9 +2,11 @@
 namespace App\Controllers;
 
 class HomeController {
-    function __construct()
-    {
-        echo "<h2>hom :)</h2>";
+    function index(){
+        return view("home", ["title"=>"Home"]);
+    }
+    function contact(){
+        return view("contact", ["title"=>"Contact"]);
     }
 }
 ?>
