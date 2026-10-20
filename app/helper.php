@@ -12,3 +12,7 @@
         if ($data && is_array($data)) extract($data);
         require_once __DIR__."/Views/pages/".$view.".view.php";
     }
+
+    function env(string $var) {
+        return filter_var($_ENV[$var]);
+    }
