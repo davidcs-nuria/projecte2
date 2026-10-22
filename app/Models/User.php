@@ -2,15 +2,8 @@
 
     namespace App\Models;
 
-    use App\Core\DB;
+    use App\Models\Model;
 
-    class User {
-        private DB $db;
-
-        function create():self {
-
-        }
-        function edit(int $id) {
-
-        }
+    class User extends Model {
+        protected string $table = "users";
     }

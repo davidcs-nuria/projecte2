@@ -4,6 +4,7 @@
 
     use PDO;
 use PDOException;
+use RuntimeException;
 
     final class DB {
         // protected PDO $pdo;
@@ -20,6 +21,8 @@ use PDOException;
                         PDO::ATTR_EMULATE_PREPARES => false
                     ]);
                 } catch (PDOException $e) {
+                    die($e->getMessage());
+                } catch (RuntimeException $e) {
                     die($e->getMessage());
                 }
             }
